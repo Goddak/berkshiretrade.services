@@ -4,7 +4,18 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+				'bts-yellow': '#FACD5B',
+				'bts-black': '#252323',
+				'bts-white': '#EEEEFF',
+				'bts-red': '#A53860',
+				'bts-green': '#61C9A8',
+			},
+      spacing: {
+        '128': '32rem',
+      }
+    },
   },
   plugins: [],
 }
