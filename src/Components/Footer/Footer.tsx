@@ -8,9 +8,10 @@ export interface IRelatedLink {
 
 interface IFooter {
 	relatedLinks?: IRelatedLink[];
+	className?: string;
 }
 
-const defaultRelatedLinks: IRelatedLink[] = [
+const usefulLinks: IRelatedLink[] = [
 	{
 		label: "Home",
 		linkTo: "/",
@@ -37,19 +38,21 @@ const getCurrentYear: () => number = () => {
 	return new Date().getFullYear();
 };
 
-const Footer: React.FC<IFooter> = ({ relatedLinks }) => {
-	return <div className={`w-full h-36 px-36 flex py-5 bg-bts-black text-bts-white`}>
-		<div className="w-1/3 flex flex-col">
-			<h3 className="text-xl font-light mb-5">{relatedLinks ? "Related" : "Useful"} Links:</h3>
-			<Menu className="px-5 flex flex-wrap" menuItems={relatedLinks ? relatedLinks : defaultRelatedLinks} />
+const Footer: React.FC<IFooter> = ({ relatedLinks, className }) => {
+	return <div className={`${className} w-full xl:h-36 flex flex-col bg-bts-black text-bts-white`}>
+		<div className="flex order-1 mb-8 xl:flex-col xl:w-1/3">
+			<h3 className="w-2/5 text-xl font-light mb-5">{relatedLinks ? "Related" : "Useful"} Links:</h3>
+			<Menu className="px-5 flex flex-col" menuItems={relatedLinks ? relatedLinks : usefulLinks} />
 		</div>
-		<div className="w-1/3 flex flex-col justify-center items-center">
+		<div className="xl:w-1/3 flex flex-col justify-center items-center order-2">
 			<p>© Berkshire Trade Services Ltd {getCurrentYear()}</p>
 		</div>
-		<div className="w-1/3 flex flex-col items-center">
-			<h3 className="text-xl font-light mb-5">Find us on:</h3>
-			<div className="px-5">Facebook</div>
-			<div className="px-5">NextDoor</div>
+		<div className="flex items-center mb-8 xl:flex-col xl:w-1/3">
+			<h3 className="w-2/5 text-xl font-light mb-5">Find us on:</h3>
+			<div className="flex flex-col">
+				<div className="px-5">Facebook</div>
+				<div className="px-5">NextDoor</div>
+			</div>
 		</div>
 	</div>;
 };

@@ -1,8 +1,10 @@
 import React, { FC } from "react";
+import ContactForm from "../../Components/ContactForm/ContactForm";
 import Hero from "../../Components/Hero/Hero";
 
 import Page from "../../Components/Page/Page";
-import PillSlider, { IPill } from "../../Components/PillSlider/PillSlider";
+import { IPill } from "../../Components/PillSlider/PillSlider";
+import { TailwindBreakpoints } from "../../Enums";
 
 const Pills: IPill[] = [
 	{
@@ -12,64 +14,92 @@ const Pills: IPill[] = [
 		imageAlt: "Bathroom installation"
 	},
 	{
-		label: "Bathroom Repair",
-		to: "/bathroom-repair",
-		imageSrc: "/pill-images/trader.jpg",
-		imageAlt: "Bathroom repair"
-	},
-	{
 		label: "Kitchen Installation",
 		to: "/kitchen-installation",
 		imageSrc: "/pill-images/kitchen-installation.jpg",
 		imageAlt: "Kitchen installation"
 	},
 	{
-		label: "Kitchen Repair",
-		to: "/kitchen-repair",
-		imageSrc: "/pill-images/trader.jpg",
-		imageAlt: "Kitchen repair"
+		label: "EV Charging",
+		to: "/ev-charging",
+		imageSrc: "/pill-images/ed-harvey-ev-charger.jpg",
+		imageAlt: "Electric vehicle charger installation service"
 	},
 	{
-		label: "Plumbing",
-		to: "/plumbing",
-		imageSrc: "/pill-images/trader.jpg",
-		imageAlt: "Plumbing"
+		label: "Laminate Flooring",
+		to: "/flooring",
+		imageSrc: "/pill-images/steven-ungermann-flooring.jpg",
+		imageAlt: "Laminate flooring installation service"
 	},
 	{
-		label: "Electrical",
-		to: "/electrical",
-		imageSrc: "/pill-images/trader.jpg",
-		imageAlt: "Electrical"
+		label: "Landscape Gardening",
+		to: "/tiling",
+		imageSrc: "/pill-images/tile-merchant-ireland-landscaping.jpg",
+		imageAlt: "Tiling"
+	},
+	{
+		label: "Flat Pack Assembly",
+		to: "/flat-pack-assembly",
+		imageSrc: "/pill-images/norbert-levajsics-flatpack-assembly.jpg",
+		imageAlt: "Flat pack assembly service berkshire"
+	},
+	{
+		label: "EICR Testing",
+		to: "/eicr-testing",
+		imageSrc: "/pill-images/mostafa-mahmoudi-fuseboard-replacement.jpg",
+		imageAlt: "Electrical installation condition report testing"
 	},
 	{
 		label: "Tiling",
 		to: "/tiling",
-		imageSrc: "/pill-images/trader.jpg",
-		imageAlt: "Tiling"
+		imageSrc: "/pill-images/steven-ungermann-tiling.jpg",
+		imageAlt: "Kitchen with tiled walls and floor"
 	},
 	{
-		label: "Painting & Decorating",
-		to: "/painting-and-decorating",
+		label: "Plastering",
+		to: "/plastering",
 		imageSrc: "/pill-images/trader.jpg",
-		imageAlt: "Painting & Decorating"
+		imageAlt: "Plastering"
 	},
 	{
-		label: "Flooring",
-		to: "/flooring",
+		label: "Gardening",
+		to: "/gardening",
 		imageSrc: "/pill-images/trader.jpg",
-		imageAlt: "Flooring"
+		imageAlt: "Gardening"
 	},
 	{
-		label: "Carpentry",
-		to: "/carpentry",
-		imageSrc: "/pill-images/carpentry.jpg",
-		imageAlt: "Carpentry"
+		label: "Handyman",
+		to: "/handyman",
+		imageSrc: "/pill-images/trader.jpg",
+		imageAlt: "Handyman"
+	},
+	{
+		label: "Locksmith",
+		to: "/locksmith",
+		imageSrc: "/pill-images/trader.jpg",
+		imageAlt: "Locksmith"
 	},
 ];
 
-
+const getPillsToDisplayForCurrentWidth = (width: number): IPill[] => {
+	if (width < TailwindBreakpoints.sm) {
+		return Pills.slice(0, 6);
+	} else if (width < TailwindBreakpoints.md) {
+		return Pills.slice(0, 4);
+	} else if (width < TailwindBreakpoints.lg) {
+		return Pills.slice(0, 6);
+	} else if (width < TailwindBreakpoints.xl) {
+		return Pills.slice(0, 8);
+	} else if (width < TailwindBreakpoints["2xl"]) {
+		return Pills.slice(0, 10);
+	} else {
+		return Pills;
+	}
+};
 
 const HomePage: FC = () => {
+	const bodyWidth = document.body.clientWidth;
+
 	return <Page>
 		<Hero 
 			title="Dependable maintenance & repair services for Landlords & Property Owners"
@@ -81,12 +111,28 @@ const HomePage: FC = () => {
 			fadeIn
 			fadeToClass="to-white"
 			fadeBgClass="bg-white"
+			className="p-8"
 		/>
-		<div className="">
-			<h2 className="ml-36 mt-36 mb-16 font-light text-5xl">Popular Services</h2>
-			<PillSlider pills={Pills} />
+		<div className="bg-bts-yellow pt-16 p-8 pb-0 flex flex-col">
+			<h2 className="mb-12 font-light text-5xl">Popular Services</h2>
+			<div className="flex justify-center flex-wrap">
+				{getPillsToDisplayForCurrentWidth(bodyWidth).map((pill, index) => {
+					return (<div key={index} className="w-full aspect-video mb-8 rounded-lg shadow-md bg-slate-400 relative overflow-hidden transition-transform hover:-translate-y-2 hover:cursor-pointer">
+						<img className="bg-cover bg-center w-full h-full" src={pill.imageSrc} alt={pill.imageAlt} />
+						<div className="opacity-0 transition-opacity duration-500 p-5 font-light text-xl text-bts-white flex justify-center items-center text-center absolute top-0 right-0 left-0 bottom-0 hover:bg-bts-black hover:opacity-90 hover:visible z-10">{pill.label}</div>
+					</div>);
+				})}
+			</div>
 		</div>
-		<div>Home Page</div>
+		<div className="flex p-8 pt-16">
+			<div className="flex flex-col xl:w-1/2">
+				<h2 className="mb-12 font-light text-5xl">Send us a message</h2>
+				<ContactForm />
+			</div>
+			<div className="hidden xl:block xl:w-1/2 ">
+				<img src="/hero-images/home-page.jpg" alt="Quality bathroom installation and repair services" />
+			</div>
+		</div>
 	</Page>;
 };
 
