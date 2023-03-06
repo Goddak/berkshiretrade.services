@@ -1,41 +1,45 @@
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
-export interface IContactForm {
+export interface IContactFormState {
 	name: string;
 	email: string;
 	phone: string;
 	message: string;
 }
 
-const ContactForm: React.FC = () => {
-	const { register, handleSubmit, formState } = useForm<IContactForm>();
+interface IContactForm {
+	className?: string;
+}
+
+const ContactForm: React.FC<IContactForm> = ({ className }) => {
+	const { register, handleSubmit, formState } = useForm<IContactFormState>();
 	const { errors } = formState;
 
-	const onSubmit: SubmitHandler<IContactForm> = (data: IContactForm, event?: React.BaseSyntheticEvent) => {
+	const onSubmit: SubmitHandler<IContactFormState> = (data: IContactFormState, event?: React.BaseSyntheticEvent) => {
 		if (event) event.preventDefault();
 		console.log(data);
 	};
 
-	return <form onSubmit={handleSubmit(onSubmit)}>
+	return <form className={className} onSubmit={handleSubmit(onSubmit)}>
 		<div className="flex flex-col mb-4">
 			<label className="font-light text-xl" htmlFor="name">Name</label>
-			<input className="w-full p-2 border border-solid border-bts-black rounded-md xl:w-96 xl:p-1 xl:pl-2" type="text" {...register('name', { required: true })} />
+			<input className="w-full p-2 border border-solid border-bts-black rounded-md" type="text" {...register('name', { required: true })} />
 			{errors.name && <span className="text-bts-red">This field is required</span>}
 		</div>
 		<div className="flex flex-col mb-4">
 			<label className="font-light text-xl" htmlFor="email">Email</label>
-			<input className="w-full p-2 border border-solid border-bts-black rounded-md xl:w-96 xl:p-1 xl:pl-2" type="email" {...register("email", { required: true })} />
+			<input className="w-full p-2 border border-solid border-bts-black rounded-md" type="email" {...register("email", { required: true })} />
 			{errors.email && <span className="text-bts-red">This field is required</span>}
 		</div>
 		<div className="flex flex-col mb-4">
 			<label className="font-light text-xl" htmlFor="phone">Phone</label>
-			<input className="w-full p-2 border border-solid border-bts-black rounded-md xl:w-96 xl:p-1 xl:pl-2" type="text" {...register("phone", { required: true })} />
+			<input className="w-full p-2 border border-solid border-bts-black rounded-md" type="text" {...register("phone", { required: true })} />
 			{errors.phone && <span className="text-bts-red">This field is required</span>}
 		</div>
 		<div className="flex flex-col mb-4">
 			<label className="font-light text-xl" htmlFor="message">Message</label>
-			<textarea className="w-full p-2 border border-solid border-bts-black rounded-md xl:w-96 xl:p-1 xl:pl-2" {...register("message", { required: true })} />
+			<textarea className="w-full p-2 border border-solid border-bts-black rounded-md" {...register("message", { required: true })} />
 			{errors.message && <span className="text-bts-red">This field is required</span>}
 		</div>
 		<input type="submit" className="w-full rounded-md bg-bts-yellow text-bts-black p-4" />
