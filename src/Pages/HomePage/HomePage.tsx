@@ -145,7 +145,7 @@ const HomePage: FC = () => {
 			fadeToClass="to-white"
 			fadeBgClass="bg-white"
 		/>
-		<div className="bg-bts-yellow pt-16 p-8 pb-0 flex flex-col">
+		<div className="bg-bts-yellow pt-16 p-8 pb-0 flex flex-col lg:px-32">
 			<h2 className="mb-12 font-light text-5xl">Popular Services</h2>
 			<div className="flex justify-center flex-wrap">
 				{pillsToDisplay.map((pill, index) => {
