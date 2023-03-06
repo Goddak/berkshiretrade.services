@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
 				'bts-yellow': '#FACD5B',
+        'bts-yellow-dark': '#F9C74F',
 				'bts-black': '#252323',
 				'bts-white': '#EEEEFF',
 				'bts-red': '#A53860',

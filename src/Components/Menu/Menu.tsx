@@ -14,8 +14,8 @@ interface MenuProps {
 const Menu: React.FC<MenuProps> = ({ menuItems, column, hamburger, className }) => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
-	if (hamburger) return <div className="relative">
-		<BurgerButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
+	if (hamburger) return <div className="">
+		<BurgerButton className="mr-8" isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
 		<BurgerMenu isOpen={isOpen} items={menuItems} className={`absolute left-0 top-20 right-0`} />
 	</div>;
 

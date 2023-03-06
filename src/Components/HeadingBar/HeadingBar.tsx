@@ -10,8 +10,8 @@ const isSmallerThanTailwindLg: () => boolean = () => {
 };
 
 const HeadingBar: React.FC = () => {
-	return <div className="w-full h-20 flex justify-between items-center bg-bts-yellow z-10">
-		<img className="object-cover h-20" src="/logo.png" alt="Berkshire Trade Services Logo" />
+	return <div className="w-full h-20 flex justify-between items-center bg-bts-yellow z-20">
+		<img className="object-cover h-20 md:pl-8" src="/logo.png" alt="Berkshire Trade Services Logo" />
 		<div className="w-60"></div>
 		<Menu hamburger={isSmallerThanTailwindLg()} menuItems={[
 			{
