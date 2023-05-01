@@ -82,17 +82,17 @@ const Pills: IPill[] = [
 ];
 
 const getPillsToDisplayForCurrentWidth = (width: number): IPill[] => {
-	console.log(width, TailwindBreakpoints);
+	console.log('getPillsToDisplayForCurrentWidth', width, TailwindBreakpoints);
 	if (width < TailwindBreakpoints.md) {
-		return Pills.slice(0, 6);
+		return Pills.slice(0, 5);
 	} else if (width >= TailwindBreakpoints.md && width < TailwindBreakpoints.lg) {
-		return Pills.slice(0, 10);
+		return Pills.slice(0, 8);
 	} else if (width >= TailwindBreakpoints.lg && width < TailwindBreakpoints.xl) {
 		return Pills.slice(0, 9);
 	} else if (width >= TailwindBreakpoints.xl && width < TailwindBreakpoints["2xl"]) {
-		return Pills.slice(0, 8);
+		return Pills.slice(0, 9);
 	} else if (width >= TailwindBreakpoints["2xl"]) {
-		return Pills.slice(0, 10);
+		return Pills.slice(0, 12);
 	} else {
 		return Pills;
 	}
@@ -100,6 +100,8 @@ const getPillsToDisplayForCurrentWidth = (width: number): IPill[] => {
 
 const getPillsModulusForCurrentWidth = (width: number): number => {
 	if (width >= TailwindBreakpoints.lg && width < TailwindBreakpoints.xl) {
+		return 3;
+	} else if (width >= TailwindBreakpoints.xl && width < TailwindBreakpoints["2xl"]) {
 		return 3;
 	} else {
 		return 0;
@@ -118,9 +120,17 @@ const getMarginClassesForCurrentWidth = (width: number, isModulusStyled:boolean)
 		}
 		return style;
 	} else if (width >= TailwindBreakpoints.xl && width < TailwindBreakpoints["2xl"]) {
-		return "";
+		let style = "xl:mr-8";
+		if (isModulusStyled) {
+		  style += " xl:mr-0"
+		}
+		return style;
 	} else if (width >= TailwindBreakpoints["2xl"]) {
-		return "";
+		let style = "2xl:mr-8";
+		if (isModulusStyled) {
+		  style += " 2xl:mr-0"
+		}
+		return style;
 	} else {
 		return "";
 	}
@@ -149,9 +159,7 @@ const HomePage: FC = () => {
 			<h2 className="mb-12 font-light text-5xl">Popular Services</h2>
 			<div className="flex justify-center flex-wrap">
 				{pillsToDisplay.map((pill, index) => {
-					console.log(index, modulus, index % modulus);
 					let isModulusStyled = (modulus > 0) && (index % modulus === 2);
-					console.log(isModulusStyled, modulus > 0, index % modulus === 2);
 					return (<div key={index} className={`w-full aspect-video mb-8 rounded-lg shadow-md bg-slate-400 relative overflow-hidden transition-transform hover:-translate-y-2 hover:cursor-pointer md:w-2/5 lg:aspect-auto lg:h-32 lg:w-3/12 ${getMarginClassesForCurrentWidth(bodyWidth, isModulusStyled)}`}>
 						<img className="w-full h-full" src={pill.imageSrc} alt={pill.imageAlt} />
 						<div className="opacity-0 transition-opacity duration-500 p-5 font-light text-xl text-bts-white flex justify-center items-center text-center absolute top-0 right-0 left-0 bottom-0 hover:bg-bts-black hover:opacity-90 hover:visible z-10">{pill.label}</div>
