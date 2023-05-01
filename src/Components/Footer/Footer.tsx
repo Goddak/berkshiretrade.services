@@ -46,7 +46,7 @@ const Footer: React.FC<IFooter> = ({ relatedLinks, className }) => {
 		</div>
 		<div className="flex flex-col justify-center items-center order-2 lg:w-1/3 lg:justify-end lg:order-none">
 			<p>© Berkshire Trade Services Ltd {getCurrentYear()}</p>
-			<p>Registered Company: 14285017</p>
+			<p>Company registration number: 14285017</p>
 		</div>
 		<div className="flex items-center mb-8 md:w-1/2 lg:flex-col lg:w-1/3 md:absolute md:right-0 lg:relative lg:items-center">
 			<h3 className="w-2/5 text-xl font-light mb-5 lg:w-auto">Find us on:</h3>
