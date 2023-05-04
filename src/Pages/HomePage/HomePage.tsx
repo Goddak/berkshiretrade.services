@@ -146,7 +146,7 @@ const HomePage: FC = () => {
 		<Hero
 			className="p-8 md:p-24"
 			title="Dependable maintenance & repair services for Landlords & Property Owners"
-			subtitle="As a landlord, you have a lot of responsibilities to manage. One of the most important is ensuring that your rental properties are in good repair and safe for your tenants."
+			subtitle="As a property owner, you have a lot of responsibilities to manage. One of the most important is ensuring that your properties are in good repair and safe for their inhabitants."
 			ctaLabel="Get in touch"
 			ctaTo="/quote"
 			imageSrc="/hero-images/home-page.jpg"
