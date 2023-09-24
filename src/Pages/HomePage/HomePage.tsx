@@ -7,7 +7,7 @@ import { IPill } from "../../Components/PillSlider/PillSlider";
 import { TailwindBreakpoints } from "../../Enums";
 import TextSection from "../../Components/TextSection/TextSection";
 import ServicesOverview from "../../Components/ServicesOverview/ServicesOverview";
-import Services from "../../Helpers/Services/Services";
+import ServiceList from "../../Helpers/Services";
 import Testimonials from "../../Helpers/Testimonials/Testimonials";
 import TestimonialsSection from "../../Components/TestimonialsSection/TestimonialsSection";
 
@@ -138,7 +138,7 @@ const HomePage: FC = () => {
 			imageAlt="Quality bathroom installation and repair services"
 			className="bg-bts-white"
 		/>
-		<ServicesOverview services={Services} bg1ClassName="bg-bts-yellow" bg2ClassName="bg-bts-white"/>
+		<ServicesOverview services={ServiceList} bg1ClassName="bg-bts-yellow" bg2ClassName="bg-bts-white"/>
 		<TestimonialsSection testimonials={Testimonials} quantity={2} bg1ClassName="bg-bts-black" bg2ClassName="bg-bts-yellow" />
 		<TextSection title="Trusted by Landlords & Property Owners" subtitle="Know who is accessing your property" text="We know that you want to be able to trust the people who are working on your property. That’s why we only work with tradespeople who have been vetted and approved by us. We also provide a 24/7 emergency call-out service, so you can rest assured that we’ll be there when you need us most." ctaLabel="Get in touch" ctaTo="/quote" imageSrc="/hero-images/home-page.jpg" imageAlt="Quality bathroom installation and repair services" className="bg-bts-yellow"/>
 		<div className="flex flex-col py-20 px-60 bg-bts-white">

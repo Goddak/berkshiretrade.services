@@ -1,5 +1,5 @@
 import React from "react";
-import { ITestimonial } from "../../Types/Testimonial/Testimonial";
+import { ITestimonial } from "../../Types/Testimonial";
 
 
 const Testimonial: React.FC<ITestimonial> = ({ text, name, imageSrc, imageAlt, className }) => {

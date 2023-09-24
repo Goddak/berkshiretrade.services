@@ -1,5 +1,5 @@
 import React from "react";
-import { ITestimonial } from "../../Types/Testimonial/Testimonial";
+import { ITestimonial } from "../../Types/Testimonial";
 import Testimonial from "./Testimonial";
 
 interface ITestimonialsSection {
