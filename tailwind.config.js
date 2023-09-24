@@ -9,7 +9,7 @@ module.exports = {
 				'bts-yellow': '#FACD5B',
         'bts-yellow-dark': '#F9C74F',
 				'bts-black': '#252323',
-				'bts-white': '#EEEEFF',
+				'bts-white': '#FFFEFA',
 				'bts-red': '#A53860',
 				'bts-green': '#61C9A8',
 			},

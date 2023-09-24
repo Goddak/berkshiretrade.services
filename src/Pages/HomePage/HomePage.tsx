@@ -5,6 +5,11 @@ import Hero from "../../Components/Hero/Hero";
 import Page from "../../Components/Page/Page";
 import { IPill } from "../../Components/PillSlider/PillSlider";
 import { TailwindBreakpoints } from "../../Enums";
+import TextSection from "../../Components/TextSection/TextSection";
+import ServicesOverview from "../../Components/ServicesOverview/ServicesOverview";
+import Services from "../../Helpers/Services/Services";
+import Testimonials from "../../Helpers/Testimonials/Testimonials";
+import TestimonialsSection from "../../Components/TestimonialsSection/TestimonialsSection";
 
 const Pills: IPill[] = [
 	{
@@ -108,34 +113,6 @@ const getPillsModulusForCurrentWidth = (width: number): number => {
 	}
 };
 
-const getMarginClassesForCurrentWidth = (width: number, isModulusStyled:boolean): string => {
-	if (width < TailwindBreakpoints.md) {
-		return "";
-	} else if (width >= TailwindBreakpoints.md && width < TailwindBreakpoints.lg) {
-		return "md:odd:mr-8";
-	} else if (width >= TailwindBreakpoints.lg && width < TailwindBreakpoints.xl) {
-		let style = "lg:mr-8";
-		if (isModulusStyled) {
-		  style += " lg:mr-0"
-		}
-		return style;
-	} else if (width >= TailwindBreakpoints.xl && width < TailwindBreakpoints["2xl"]) {
-		let style = "xl:mr-8";
-		if (isModulusStyled) {
-		  style += " xl:mr-0"
-		}
-		return style;
-	} else if (width >= TailwindBreakpoints["2xl"]) {
-		let style = "2xl:mr-8";
-		if (isModulusStyled) {
-		  style += " 2xl:mr-0"
-		}
-		return style;
-	} else {
-		return "";
-	}
-};
-
 
 const HomePage: FC = () => {
 	const bodyWidth = document.body.clientWidth;
@@ -144,37 +121,36 @@ const HomePage: FC = () => {
 
 	return <Page>
 		<Hero
-			className="p-8 md:p-24"
 			title="Dependable maintenance & repair services for Landlords & Property Owners"
 			subtitle="As a property owner, you have a lot of responsibilities to manage. One of the most important is ensuring that your properties are in good repair and safe for their inhabitants."
 			ctaLabel="Get in touch"
 			ctaTo="/quote"
 			imageSrc="/hero-images/home-page.jpg"
 			imageAlt="Quality bathroom installation and repair services"
-			fadeIn
-			fadeToClass="to-white"
-			fadeBgClass="bg-white"
 		/>
-		<div className="bg-bts-yellow pt-16 p-8 pb-0 flex flex-col lg:px-32">
-			<h2 className="mb-12 font-light text-5xl">Popular Services</h2>
-			<div className="flex justify-center flex-wrap">
-				{pillsToDisplay.map((pill, index) => {
-					let isModulusStyled = (modulus > 0) && (index % modulus === 2);
-					return (<div key={index} className={`w-full aspect-video mb-8 rounded-lg shadow-md bg-slate-400 relative overflow-hidden transition-transform hover:-translate-y-2 hover:cursor-pointer md:w-2/5 lg:aspect-auto lg:h-32 lg:w-3/12 ${getMarginClassesForCurrentWidth(bodyWidth, isModulusStyled)}`}>
-						<img className="w-full h-full" src={pill.imageSrc} alt={pill.imageAlt} />
-						<div className="opacity-0 transition-opacity duration-500 p-5 font-light text-xl text-bts-white flex justify-center items-center text-center absolute top-0 right-0 left-0 bottom-0 hover:bg-bts-black hover:opacity-90 hover:visible z-10">{pill.label}</div>
-					</div>);
-				})}
-			</div>
-		</div>
-		<div className="flex p-8 pt-16 lg:px-32">
-			<div className="flex flex-col lg:w-1/2">
-				<h2 className="mb-12 font-light text-5xl">Send us a message</h2>
-				<img className="hidden md:mb-8 md:block lg:hidden" src="/hero-images/home-page.jpg" alt="Quality bathroom installation and repair services" />
-				<ContactForm className=""/>
-			</div>
-			<div className="hidden lg:flex lg:items-center lg:w-1/2 lg:pl-8">
-				<img className="h-fit" src="/hero-images/home-page.jpg" alt="Quality bathroom installation and repair services" />
+		<TextSection
+			title="About Us"
+			subtitle="We take the stress out of property maintenance"
+			text="Our extensive network of skilled tradespeople has been carefully curated to ensure that we can provide you with the best possible service, no matter what your needs are. We offer a wide range of services, including plumbing, electrical work, carpentry, painting and decorating, and more. Our team is always on hand to answer any questions you may have about our services or how we can help you with your property maintenance needs."
+			ctaLabel="Get in touch"
+			ctaTo="/quote"
+			imageSrc="/hero-images/home-page.jpg"
+			imageAlt="Quality bathroom installation and repair services"
+			className="bg-bts-white"
+		/>
+		<ServicesOverview services={Services} bg1ClassName="bg-bts-yellow" bg2ClassName="bg-bts-white"/>
+		<TestimonialsSection testimonials={Testimonials} quantity={2} bg1ClassName="bg-bts-black" bg2ClassName="bg-bts-yellow" />
+		<TextSection title="Trusted by Landlords & Property Owners" subtitle="Know who is accessing your property" text="We know that you want to be able to trust the people who are working on your property. That’s why we only work with tradespeople who have been vetted and approved by us. We also provide a 24/7 emergency call-out service, so you can rest assured that we’ll be there when you need us most." ctaLabel="Get in touch" ctaTo="/quote" imageSrc="/hero-images/home-page.jpg" imageAlt="Quality bathroom installation and repair services" className="bg-bts-yellow"/>
+		<div className="flex flex-col py-20 px-60 bg-bts-white">
+			<h1 className="text-4xl font-light text-center mb-4">Get a quote</h1>
+			<p className="text-lg font-light text-center mb-12">Fill out the form below and we'll get back to you as soon as possible.</p>
+			<div className="flex">
+				<div className="w-1/2 px-20">
+					<ContactForm className=""/>
+				</div>
+				<div className="w-1/2 px-20">
+					<img className="h-full" src="/hero-images/home-page.jpg" alt="Quality bathroom installation and repair services" />
+				</div>
 			</div>
 		</div>
 	</Page>;
