@@ -15,7 +15,7 @@ const Page: React.FC<PageProps> = ({ children, relatedLinks, className }) => {
 		<div className="w-full flex-grow">
 			{children}
 		</div>
-		<Footer relatedLinks={relatedLinks} className="p-8"/>
+		<Footer className="p-8"/>
 	</div>;
 };
 
