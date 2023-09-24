@@ -18,7 +18,7 @@ const TestimonialsSection: React.FC<ITestimonialsSection> = ({ testimonials, qua
 		<h1 className="text-4xl font-light text-center mb-12 text-bts-white">Testimonials</h1>
 		<div className="flex flex-wrap space-x-20 justify-center">
 			{testimonialsToRender.map(testimonial => {
-				return <Testimonial {...testimonial} className="w-5/12 flex-grow" />
+				return <Testimonial key={testimonial.name} {...testimonial} className="w-5/12 flex-grow" />
 			})}
 		</div>
 	</div>
