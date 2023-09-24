@@ -1,9 +1,9 @@
 enum Routes {
 	Home = '/',
-	About = '/about',
-	Blog = '/blog',
-	Contact = '/contact',
-	Login = '/login',
+	About = '/about-us',
+	Services = '/our-services',
+	Contact = '/contact-us',
+	Login = '/customer-login',
 }
 
 export default Routes;
