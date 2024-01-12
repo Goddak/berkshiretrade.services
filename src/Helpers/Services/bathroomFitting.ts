@@ -1,7 +1,8 @@
+import { Routes } from "../../Enums";
 import Service from "../../Types/Service";
 
 const BathroomFitting: Service = {
-	route: "/bathroom-fitting",
+	route: Routes.Contact,
 	title: "Bathroom Fitting",
 	shortDesc: "Turn your bathroom into a sanctuary. Our fittings combine functionality and luxury for the ultimate relaxation.",
 	longDesc: `Your bathroom is more than just a functional space; it's your personal sanctuary, a place of relaxation and rejuvenation. Our bathroom fitting services are dedicated to creating a bathroom that not only meets your practical needs but also provides a luxurious retreat within your home.
@@ -15,7 +16,7 @@ const BathroomFitting: Service = {
 							But our bathroom fitting service is about more than aesthetics and functionality. It's about transforming your bathroom into a place where you can escape, unwind, and pamper yourself. Whether you're looking for a complete remodel or a partial upgrade, we have the expertise to make your dream bathroom a reality.
 
 							So, if you're ready to turn your bathroom into a haven of luxury and style, we invite you to explore our bathroom fitting solutions. Let us show you how we can enhance your home with a bathroom that blends beauty, comfort, and functionality seamlessly. Your perfect bathroom is just a step away, and we're here to make it happen.`,
-	imageSrc: "/pill-images/bathroom-installation-min.jpg",
+	imageSrc: "/srvc-imgs/bathroom-installation-min.jpg",
 	imageAlt: "Bathroom Fitting",
 	isPopular: true
 };

@@ -10,12 +10,12 @@ interface PageProps {
 }
 
 const Page: React.FC<PageProps> = ({ children, relatedLinks, className }) => {
-	return <div className={`${className} min-h-screen flex flex-col`}>
+	return <div className={`min-h-screen flex flex-col scroll-smooth ${className ? className : ""}`}>
 		<HeadingBar />
 		<div className="w-full flex-grow">
 			{children}
 		</div>
-		<Footer className="p-8"/>
+		<Footer />
 	</div>;
 };
 

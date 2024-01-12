@@ -1,7 +1,8 @@
+import { Routes } from "../../Enums";
 import Service from "../../Types/Service";
 
 const MediaUnits: Service = {
-	route: "/media-units",
+	route: Routes.Contact,
 	title: "Media Units",
 	shortDesc: "Create a stylish and organized entertainment space with custom media unit solutions. Elevate your home cinema experience.",
 	longDesc: `In today's modern homes, the media unit has become a focal point, where technology and style harmonize to create a functional and aesthetic centerpiece. At our company, we specialize in crafting bespoke media units that not only accommodate your entertainment essentials but also elevate the overall look and feel of your living space.
@@ -15,7 +16,7 @@ const MediaUnits: Service = {
 							But it's not just about aesthetics and functionality. We believe that a media unit should enhance your entertainment experience. With integrated shelving, hidden compartments, and smart storage solutions, your media unit can streamline your space and keep clutter at bay.
 
 							If you're passionate about home entertainment and want a media unit that reflects your style and enhances your living area, look no further. Our media unit services are designed to make your vision a reality, with expert craftsmanship and attention to detail. Discover how we can transform your media area into a sophisticated and functional space that you'll love spending time in. Your perfect media unit awaits – let's create it together.`,
-	imageSrc: "/pill-images/trader-min.jpg",
+	imageSrc: "/srvc-imgs/media-units.jpg",
 	imageAlt: "Media Units"
 };
 

@@ -1,7 +1,8 @@
+import { Routes } from "../../Enums";
 import Service from "../../Types/Service";
 
 const EvChargingPoints: Service = {
-	route: "/ev-charging-points",
+	route: Routes.Contact,
 	title: "EV Charging Points",
 	shortDesc: "Future-proof your home with our EV charging points. We install charging points for all types of electric vehicles.",
 	longDesc: `Electric vehicles are the future of transportation. With more and more people switching to electric cars, it's important to have a charging point at home so you can charge your car overnight and be ready for the next day.
@@ -11,7 +12,7 @@ const EvChargingPoints: Service = {
 							Our team is committed to providing excellent customer service and we'll make sure everything is installed correctly and safely. You'll never have to worry about running out of power again!
 
 							Contact us today to learn more about our EV charging points and how they can help future-proof your home!`,
-	imageSrc: "/pill-images/ev-charging-points-min.jpg",
+	imageSrc: "/srvc-imgs/myenergi-ev-charger.jpg",
 	imageAlt: "EV Charging Points",
 	isPopular: true
 };

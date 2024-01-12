@@ -1,7 +1,8 @@
+import { Routes } from "../../Enums";
 import Service from "../../Types/Service";
 
 const LaminateFlooring: Service = {
-	route: "/laminate-flooring",
+	route: Routes.Contact,
 	title: "Laminate Flooring",
 	shortDesc: "Achieve the look of hardwood without the cost. Our laminate flooring solutions are durable, affordable, and easy to maintain.",
 	longDesc: `Transform your home with the timeless elegance and practicality of laminate flooring. Our laminate flooring services bring you the best of both worlds—exquisite aesthetics that mimic natural materials and outstanding durability suitable for everyday life.
@@ -19,7 +20,7 @@ const LaminateFlooring: Service = {
 							Our laminate flooring services prioritize quality and customer satisfaction. We guide you through the selection process, ensuring you choose the perfect style and finish to complement your home's decor. Our expert installation guarantees a seamless, long-lasting flooring solution that elevates the beauty and functionality of your living spaces.
 
 							Experience the beauty, durability, and ease of maintenance that laminate flooring can bring to your home. Contact us today to explore our extensive range of options and transform your space into a haven of style and practicality.`,
-	imageSrc: "/pill-images/trader-min.jpg",
+	imageSrc: "/srvc-imgs/laminate-flooring.jpg",
 	imageAlt: "Laminate Flooring"
 };
 

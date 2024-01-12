@@ -1,7 +1,8 @@
+import { Routes } from "../../Enums";
 import Service from "../../Types/Service";
 
 const LoftBoarding: Service = {
-	route: "/loft-boarding",
+	route: Routes.Contact,
 	title: "Loft Boarding",
 	shortDesc: "Unlock hidden storage potential. Our loft boarding solutions provide easy access and extra space for your belongings.",
 	longDesc: `Your often-neglected loft space has the potential to become a valuable asset in your home. Our loft boarding services are your gateway to unlocking this potential. Imagine a loft that's not just a storage space for boxes but a versatile, accessible area that can add both practicality and value to your property.
@@ -17,7 +18,7 @@ const LoftBoarding: Service = {
 							Our commitment to quality means we use the finest materials, ensuring durability and longevity. Your loft boarding will stand the test of time, ready to serve you and your home for years to come.
 
 							If you're looking to make the most of your loft space, our loft boarding services are the perfect solution. Turn your underutilized attic into a valuable asset, increasing your property's functionality and potential resale value. Contact us today to explore the endless possibilities that loft boarding can offer your home.`,
-	imageSrc: "/pill-images/trader-min.jpg",
+	imageSrc: "/srvc-imgs/IMG_20230125_120706.jpg",
 	imageAlt: "Loft Boarding"
 };
 

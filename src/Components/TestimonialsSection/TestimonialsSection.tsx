@@ -14,11 +14,11 @@ const TestimonialsSection: React.FC<ITestimonialsSection> = ({ testimonials, qua
 	let testimonialsToRender = testimonials;
 	if (quantity) testimonialsToRender = testimonials.slice(0, quantity);
 
-	return <div className={`flex flex-col py-20 px-60 ${bg1ClassName} ${className}`}> 
-		<h1 className="text-4xl font-light text-center mb-12 text-bts-white">Testimonials</h1>
-		<div className="flex flex-wrap space-x-20 justify-center">
+	return <div className={`flex flex-col p-8 sm:px-16 xl:px-20 pt-10 2xl:py-20 2xl:px-60 ${bg1ClassName} ${className}`}> 
+		<h1 className="text-4xl font-light text-center mb-10 2xl:mb-12 text-bts-white">Testimonials</h1>
+		<div className="flex flex-wrap 2xl:space-x-20 justify-center">
 			{testimonialsToRender.map(testimonial => {
-				return <Testimonial key={testimonial.name} {...testimonial} className="w-5/12 flex-grow" />
+				return <Testimonial key={testimonial.name} {...testimonial} className="w-full lg:w-3/4 xl:w-full xl:self-center 2xl:w-5/12 mb-10" />
 			})}
 		</div>
 	</div>

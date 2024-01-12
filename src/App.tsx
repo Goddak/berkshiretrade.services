@@ -1,10 +1,11 @@
 import React from 'react';
 
-import Routes from './Routes';
+// import Routes from './Routes';
+import { HomePage } from './Pages';
 
 function App() {
 	return (
-		<Routes />
+		<HomePage />
 	);
 }
 

@@ -16,7 +16,7 @@ const Menu: React.FC<MenuProps> = ({ menuItems, column, hamburger, className }) 
 
 	if (hamburger) return <div className={className}>
 		<BurgerButton className="mr-8" isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
-		<BurgerMenu isOpen={isOpen} items={menuItems} className={`absolute left-0 top-20 right-0`} />
+		<BurgerMenu isOpen={isOpen} items={menuItems} className={`absolute top-20 right-0`} />
 	</div>;
 
 	return <div className={`${className} ${column ? "flex flex-col" : ""}`}>
