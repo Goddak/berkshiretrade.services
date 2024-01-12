@@ -1,0 +1,51 @@
+General Tasks:
+	☐ Improve performance
+
+Menu Tasks:
+	✔ Fix padding @started(23-09-24 11:56) @done(23-09-24 12:01) @lasted(5m10s)
+
+Hero Tasks:
+	☐ Add option for second button
+	☐ Tweak spacing
+
+About Us Tasks:
+	☐ Add option for second button
+	☐ Use real content
+		☐ Heading
+		☐ Text
+		☐ Image
+
+Service Tasks:
+	✔ Categorise services @started(23-09-24 12:03) @stopped(23-09-24 12:11) @started(23-09-24 12:31) @done(23-09-24 14:48) @lasted(2h45m12s)
+	✔ Add isPopular flag @done(23-09-24 14:48)
+	☐ Use real content
+		☐ Heading
+		☐ Text
+		☐ Image
+	☐ Add "All Services" page
+	
+Testimonial Tasks:
+	☐ Use real content
+		☐ Text
+		☐ Name
+		☐ Image
+	☐ Add more testimonials
+
+Trust Us Tasks:
+	☐ Add option for second button
+	☐ Use real content
+		☐ Heading
+		☐ Text
+		☐ Image
+
+Contact Us Tasks:
+	☐ Convert image column to text column
+		☐ Find some nice icons
+		☐ Postal Address
+		☐ Phone Number
+		☐ Email Address
+		☐ Social Media Links
+
+Footer Tasks:
+	✔ Remove "Useful Links" section @started(23-09-24 11:39) @done(23-09-24 11:55) @lasted(16m41s)
+	✔ Remove "Find Us On" section @started(23-09-24 11:39) @done(23-09-24 11:55) @lasted(16m43s)
