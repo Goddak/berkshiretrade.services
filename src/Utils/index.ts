@@ -1,6 +1,8 @@
 import TailwindBreakpoints from "../Enums/TailwindBreakpoints";
 import Service from "../Types/Service";
 
+import { websiteText } from "./textUtils";
+
 /**
  * @param bodyWidth The width of the screen.
  * @returns An array of numbers.
@@ -92,3 +94,12 @@ export const sortOtherServices = (
 
 	return [otherServices, unusedServices];
 }
+
+const utils = {
+	getModuli,
+	sortServices,
+	sortOtherServices,
+	websiteText,
+}
+
+export default utils; 
