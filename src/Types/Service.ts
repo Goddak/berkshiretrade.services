@@ -15,6 +15,7 @@ interface IService {
 	shortDesc: string;
 	longDesc: string;
 	imageSrc: string;
+	thumbSrc: string;
 	imageAlt: string;
 	isPopular?: boolean;
 	className?: string;

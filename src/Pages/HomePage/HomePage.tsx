@@ -21,9 +21,9 @@ const aboutUsTextContent: TextSectionTextContent = {
 };
 
 const aboutUsImageContent: TextSectionImageContent = {
-	imgSrc: "/txt-imgs/r-architecture-unsplash.jpg",
+	imgSrc: "/txt-imgs/r-architecture-unsplash-min.jpg",
 	imgAlt: "Quality bathroom installation and repair services",
-	mImgSrc: "/txt-imgs/about-us-mobile.jpg",
+	mImgSrc: "/txt-imgs/about-us-mobile-min.jpg",
 	mImgAlt: "Quality bathroom installation and repair services",
 };
 
@@ -36,9 +36,9 @@ const trustedTextContent: TextSectionTextContent = {
 };
 
 const trustedImageContent: TextSectionImageContent = {
-	imgSrc: "/txt-imgs/trusted.jpg",
+	imgSrc: "/txt-imgs/trusted-min.jpg",
 	imgAlt: "Quality bathroom installation and repair services",
-	mImgSrc: "/txt-imgs/trusted-mobile.jpg",
+	mImgSrc: "/txt-imgs/trusted-mobile-min.jpg",
 	mImgAlt: "Quality bathroom installation and repair services",
 };
 
