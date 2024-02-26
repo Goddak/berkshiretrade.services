@@ -16,7 +16,8 @@ const MediaUnits: Service = {
 							But it's not just about aesthetics and functionality. We believe that a media unit should enhance your entertainment experience. With integrated shelving, hidden compartments, and smart storage solutions, your media unit can streamline your space and keep clutter at bay.
 
 							If you're passionate about home entertainment and want a media unit that reflects your style and enhances your living area, look no further. Our media unit services are designed to make your vision a reality, with expert craftsmanship and attention to detail. Discover how we can transform your media area into a sophisticated and functional space that you'll love spending time in. Your perfect media unit awaits – let's create it together.`,
-	imageSrc: "/srvc-imgs/media-units.jpg",
+	thumbSrc: "/srvc-imgs/media-units-thumb.jpg",
+	imageSrc: "/srvc-imgs/media-units-min.jpg",
 	imageAlt: "Media Units"
 };
 

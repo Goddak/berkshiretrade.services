@@ -3,6 +3,7 @@ type Service = {
 	title: string;
 	shortDesc: string;
 	longDesc: string;
+	thumbSrc: string;
 	imageSrc: string;
 	imageAlt: string;
 	isPopular?: boolean;

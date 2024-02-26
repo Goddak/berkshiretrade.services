@@ -10,6 +10,7 @@ const FloorTiling: Service = {
 							We offer a wide range of floor tiles in different colors, patterns, and textures so you can find exactly what you need. Our team will work with you every step of the way from choosing the right tile to installing it in your home. And if you need any repairs or maintenance done on your existing flooring, we can take care of that too.
 
 							With our help, you'll have beautiful new floors that will last for years to come! Contact us today to get started on transforming your home with our floor tiling expertise!`,
+	thumbSrc: "/srvc-imgs/steven-ungermann-tiling-thumb.jpg",
 	imageSrc: "/srvc-imgs/steven-ungermann-tiling-min.jpg",
 	imageAlt: "Floor Tiling"
 };

@@ -10,7 +10,8 @@ const CarpetFitting: Service = {
 							Our team of experts will work with you every step of the way from choosing the right carpet or rug to installing it in your home. We'll even help you pick out new furniture if needed! And if you need any repairs or maintenance done on your existing carpeting, we can take care of that too.
 	
 							With our help, you'll have beautiful new flooring that will last for years to come! Contact us today to get started on transforming your home with our carpet fitting expertise!`,
-	imageSrc: "/srvc-imgs/carpet-fitting.jpg",
+	thumbSrc: "/srvc-imgs/carpet-fitting-thumb.jpg",
+	imageSrc: "/srvc-imgs/carpet-fitting-min.jpg",
 	imageAlt: "Carpet Fitting"
 };
 

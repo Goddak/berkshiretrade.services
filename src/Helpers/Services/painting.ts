@@ -12,7 +12,8 @@ const Painting: Service = {
 							We know that painting can be a messy job, so we take extra care to protect your furniture and floors while we work. And when we're done, we'll clean up after ourselves so you don't have to worry about anything but enjoying your new space.
 
 							Whether you're looking for a fresh coat of paint or want to completely change the color scheme of your home, our team is here to help. Contact us today to learn more about our painting services and get started on transforming your home!`,
-	imageSrc: "/srvc-imgs/painting.jpg",
+	thumbSrc: "/srvc-imgs/painting-thumb.jpg",
+	imageSrc: "/srvc-imgs/painting-min.jpg",
 	imageAlt: "Painting"
 };
 

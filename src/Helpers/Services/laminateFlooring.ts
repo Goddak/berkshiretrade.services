@@ -20,7 +20,8 @@ const LaminateFlooring: Service = {
 							Our laminate flooring services prioritize quality and customer satisfaction. We guide you through the selection process, ensuring you choose the perfect style and finish to complement your home's decor. Our expert installation guarantees a seamless, long-lasting flooring solution that elevates the beauty and functionality of your living spaces.
 
 							Experience the beauty, durability, and ease of maintenance that laminate flooring can bring to your home. Contact us today to explore our extensive range of options and transform your space into a haven of style and practicality.`,
-	imageSrc: "/srvc-imgs/laminate-flooring.jpg",
+	thumbSrc: "/srvc-imgs/laminate-flooring-thumb.jpg",
+	imageSrc: "/srvc-imgs/laminate-flooring-min.jpg",
 	imageAlt: "Laminate Flooring"
 };
 

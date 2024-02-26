@@ -18,7 +18,8 @@ const LoftBoarding: Service = {
 							Our commitment to quality means we use the finest materials, ensuring durability and longevity. Your loft boarding will stand the test of time, ready to serve you and your home for years to come.
 
 							If you're looking to make the most of your loft space, our loft boarding services are the perfect solution. Turn your underutilized attic into a valuable asset, increasing your property's functionality and potential resale value. Contact us today to explore the endless possibilities that loft boarding can offer your home.`,
-	imageSrc: "/srvc-imgs/IMG_20230125_120706.jpg",
+	thumbSrc: "/srvc-imgs/loft-boarding-thumb.jpg",
+	imageSrc: "/srvc-imgs/loft-boarding-min.jpg",
 	imageAlt: "Loft Boarding"
 };
 

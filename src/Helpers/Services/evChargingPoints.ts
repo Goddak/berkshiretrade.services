@@ -12,7 +12,8 @@ const EvChargingPoints: Service = {
 							Our team is committed to providing excellent customer service and we'll make sure everything is installed correctly and safely. You'll never have to worry about running out of power again!
 
 							Contact us today to learn more about our EV charging points and how they can help future-proof your home!`,
-	imageSrc: "/srvc-imgs/myenergi-ev-charger.jpg",
+	thumbSrc: "/srvc-imgs/myenergi-ev-charger-thumb.jpg",
+	imageSrc: "/srvc-imgs/myenergi-ev-charger-min.jpg",
 	imageAlt: "EV Charging Points",
 	isPopular: true
 };
